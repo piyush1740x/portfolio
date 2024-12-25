@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-background {
+  height: 100vh;
+  background: linear-gradient(270deg, #707bf6, #5881f2, #3f64f8, #234aea);
+  background-size: 400% 400%; 
+  animation: gradientBackground 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, #b280e5, #729bf2, #88bee1, #5557e6, #a02bd2);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite, glow 3s ease-in-out infinite;
+  box-shadow: 0 0 20px 5px rgba(228, 41, 79, 0.8);
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 40px 10px rgba(74, 150, 227, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 30px 10px rgb(227, 245, 25);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+.shaking-image {
+  animation: shake 4s ease-in-out infinite;
+}
